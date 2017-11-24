@@ -1,0 +1,11 @@
+127.0.0.1 - - [03/Oct/2017:10:50:40 +0200] "GET /exercise6and7/rest/player HTTP/1.1" 404 967 http-bio-8080-exec-1 83
+127.0.0.1 - - [03/Oct/2017:10:50:43 +0200] "GET /exercise4/rest/kunder?_=1507020643611 HTTP/1.1" 404 - http-bio-8080-exec-2 0
+127.0.0.1 - - [03/Oct/2017:10:50:58 +0200] "GET /exercise6and7/questionCreator.html HTTP/1.1" 200 1601 http-bio-8080-exec-3 57
+127.0.0.1 - - [03/Oct/2017:10:51:09 +0200] "POST /exercise6and7/questionCreator.html HTTP/1.1" 200 1601 http-bio-8080-exec-4 2
+127.0.0.1 - - [03/Oct/2017:10:51:09 +0200] "GET /exercise6and7/questionCreator.css HTTP/1.1" 304 - http-bio-8080-exec-5 33
+127.0.0.1 - - [03/Oct/2017:10:51:14 +0200] "GET /exercise6and7/rest/player HTTP/1.1" 404 967 http-bio-8080-exec-6 5
+127.0.0.1 - - [03/Oct/2017:10:54:32 +0200] "GET /exercise6and7/rest/player HTTP/1.1" 404 967 http-bio-8080-exec-8 6
+127.0.0.1 - - [03/Oct/2017:10:54:42 +0200] "GET /exercise6and7/rest/nickname HTTP/1.1" 404 967 http-bio-8080-exec-9 2
+127.0.0.1 - - [03/Oct/2017:10:54:44 +0200] "GET /exercise6and7/rest/nickname HTTP/1.1" 404 967 http-bio-8080-exec-10 8
+127.0.0.1 - - [03/Oct/2017:10:58:25 +0200] "GET /exercise6and7/rest/nickname HTTP/1.1" 404 967 http-bio-8080-exec-2 5
+127.0.0.1 - - [03/Oct/2017:12:55:39 +0200] "GET /exercise6and7/rest/ HTTP/1.1" 404 967 http-bio-8080-exec-4 2

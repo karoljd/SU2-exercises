@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGamle/quiz.css">
+    <script src="../js/quizJS.js"></script>
+
+
+    <title>Quiz</title>
+</head>
+<body onload="countdownTimer()">
+    <h1 id="quizTitle">My First Quiz</h1>
+    <h3 id="quizStartTime">Start Time:</h3>
+    <div id="myProgress">
+        <div id="progressBar" title="Your current progress">10%</div>
+    </div><br><br>
+    <div class="timer">Time to answer:</div>
+    <div class="timer" ></div><br>
+    <div class="circle-wrapper">
+        <div class="circle-wrapper__circle"></div>
+
+        <div class="circle-wrapper__content">
+        <span class="time">
+            <span class="time__value" id="timer"></span>
+        </span>
+    </div><br>
+
+    <div id="question">My First Question?</div>
+    <form action="">
+        <input type="radio" name="answer" value="A">A<br>
+        <input type="radio" name="answer" value="B">B<br>
+        <input type="radio" name="answer" value="C">C<br>
+        <input type="radio" name="answer" value="D">D
+    </form>
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+
+</body>
+</html>

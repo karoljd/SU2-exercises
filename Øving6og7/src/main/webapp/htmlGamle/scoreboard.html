@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGamle/scoreboard.css">
+    <script src="../js/quizJS.js"></script>
+
+    <title>Scoreboard</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="mainPage.html">Home Page</a>
+        <a href="quizCreator.html">Create Quiz</a>
+        <a href="quiz.html">Quiz list</a>
+    </div>
+
+<p id="quizName"></p>
+<table id="myTable">
+    <colgroup>
+        <col span="1" style="width: 8px">
+    </colgroup>
+    <tr>
+        <th onclick="sortTable(0)" style="cursor: pointer" title="Click to sort">Place</th>
+        <th onclick="sortTable(1)" style="cursor: pointer" title="Click to sort">Nickname</th>
+        <th onclick="sortTable(2)" style="cursor: pointer" title="Click to sort">Points</th>
+    </tr>
+    <tr>
+        <td>1432</td>
+        <td>15A</td>
+        <td>21</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2D</td>
+        <td>432</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>H</td>
+        <td>221</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>B</td>
+        <td>42</td>
+    </tr>
+</table>
+
+    <button class="goBackbtn" onclick="window.history.back()">Go Back</button>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+
+</body>
+</html>

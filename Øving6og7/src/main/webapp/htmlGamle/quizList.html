@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGamle/quizList.css">
+    <script src="../jquery-3.2.1.min.js"></script>
+    <title>Quiz List</title>
+</head>
+<body class="container-fluid">
+    <div class="topnav" id="myTopnav">
+        <a href="mainPage.html">Home Page</a>
+        <a href="quizCreator.html">Create Quiz</a>
+        <a href="scoreboard.html">Scoreboard</a>
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <form action="questionCreator.html" method="post" enctype="text/plain">
+        <div class="container">
+            <label><b>Username</b></label>
+            <input id="nickname" type="text" placeholder="Enter Nickname" name="nickname" autofocus required title="Write your nickname">
+            <button class="goBackbtn" onclick="window.history.back()" accesskey="backspace">Go Back</button>
+            <button class="submitbtn" id="submit" type="submit" title="Click to login">Login</button>
+
+            <script type="text/javascript">
+                $("#submit").click(function () {
+                    $.post("rest/player", $("#nickname").val());
+                });
+            </script>
+        </div>
+    </form>
+
+
+    <div class="container">
+        <h2>Quiz Table</h2>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Quiz name</th>
+                <th>Beginning Time</th>
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            <tr>
+                <td>Quiz 1</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>Quiz 2</td>
+                <td>13:33</td>
+            </tr>
+            <tr>
+                <td>Quiz 3</td>
+                <td>09:15</td>
+            </tr>
+            <tr>
+                <td>Quiz 4</td>
+                <td>20:20</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+</body>
+</html>

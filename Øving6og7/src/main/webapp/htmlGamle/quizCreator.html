@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../cssGamle/quizCreator.css">
+    <title>Quiz Creator</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="mainPage.html">Home Page</a>
+    </div>
+<h1>Create Your Quiz</h1>
+    <form action="questionCreator.html" method="post" enctype="text/plain">
+        <div id="quizName">Quiz name:
+            <input type="text" id="quizNameInput" name="quizName" placeholder="Write quiz name" autofocus required title="Write here">
+        <h1></h1>
+        </div>
+        <div id="quizStartTime">Quiz start time:
+            <input type="time" name="quizStartTimeInput" placeholder="hh:mm AM/PM" required title="Write here">
+        </div>
+        <button class="goBackbtn" onclick="window.history.back()">Go Back</button>
+        <button class="submitbtn" type="submit" value="Next" title="Click to create question">Next<a href="questionCreator.html"></a></button>
+    </form>
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+    <script src="../js/quizJS.js"></script>
+</body>
+</html>

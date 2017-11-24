@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz Creator</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/minBootstrap.css">
+    <script src="../js/quizJS.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-toggle" href="#">Karol's Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="main.html">Home Page<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modal">Quiz List</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="quizCreator.html">Create Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="scoreboard.html">Scoreboard</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link glyphicon glyphicon-log-in" data-toggle="modal" data-target="#modal">Login</a>
+            </li>
+            <li>
+                <a style="padding: 10px"></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" disabled>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid" id="changeable" style="display: block">
+    <div class="row" align="center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2 class="greeting">Create Your Quiz</h2>
+        </div>
+    </div>
+    <div class="form-row align-items-center padbottom">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group">
+                    <label for="inputNameQuizCreator">Quiz name</label>
+                    <input type="text" class="form-control" id="inputNameQuizCreator" aria-label="text" placeholder="Quiz name" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label for="inputStartTimeQuizCreator">Quiz start time</label>
+                    <input type="time" class="form-control" id="inputStartTimeQuizCreator" placeholder="hh:mm AM/PM" required>
+                </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <a onclick="window.history.back()" class="btn btn-outline-secondary goBackbtn">Go Back</a>
+                    <a class="btn btn-outline-primary submitbtn" role="button"
+                       title="Click to create question" type="submit" id="createQuestionQuizCreator" onclick="changeDiv()">Next</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" style="display: none" id="changeable2">
+    <div class="row" align="center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2 class="greeting" id="quizNameQuestionCreator">Showing quiz name</h2>
+        </div>
+    </div>
+
+    <div class="form-row align-items-center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form class="questions">
+                <div class="form-group" align="left">
+                    <label for="inputQuestionQuestionCreator">Question</label>
+                    <input type="text" class="form-control" id="inputQuestionQuestionCreator" aria-label="text" placeholder="Write question ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerAQuestionCreator">A</label>
+                    <input type="text" class="form-control" id="inputAnswerAQuestionCreator" aria-label="text" placeholder="Write A answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerBQuestionCreator">B</label>
+                    <input type="text" class="form-control" id="inputAnswerBQuestionCreator" aria-label="text" placeholder="Write B answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerCQuestionCreator">C</label>
+                    <input type="text" class="form-control" id="inputAnswerCQuestionCreator" aria-label="text" placeholder="Write C answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerDQuestionCreator">D</label>
+                    <input type="text" class="form-control" id="inputAnswerDQuestionCreator" aria-label="text" placeholder="Write D answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputCorrectAnswerQuestionCreator">Correct answer</label>
+                    <input type="text" class="form-control" id="inputCorrectAnswerQuestionCreator" aria-label="text"
+                           placeholder="Is A, B, C, or D a correct answer?">
+                </div>
+
+                <form>
+                    <div class="form-group" align="left">
+                        <label for="addedFileQuestionCreator">Add a file</label>
+                        <input type="file" class="form-control-file" id="addedFileQuestionCreator">
+                    </div>
+                </form>
+
+                <div class="btn-group btn-group-sm padbottom" role="group" aria-label="">
+                    <a class="btn btn-outline-secondary cancelbtn" title="Click to cancel">Cancel</a>
+                    <a class="btn btn-outline-primary submitbtn" title="Click to create next question" id="nextQuestionQuizCreator" onclick="nextQuestion()">
+                        Next Question</a>
+                    <a href="main.html" class="btn btn-outline-primary savebtn" role="button" title="Click to save quiz" id="saveQuiz">
+                        Save Quiz</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLogin">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="player-nickname" class="col-form-label" id="newNickname">Nickname</label>
+                        <input type="text" class="form-control" id="player-nickname" required autofocus>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="quizList.html">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/quizCreator.js"></script>
+
+</body>
+</html>

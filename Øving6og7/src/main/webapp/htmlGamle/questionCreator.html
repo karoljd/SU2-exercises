@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGamle/questionCreator.css">
+    <title>Question Creator</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="mainPage.html">Home Page</a>
+    </div>
+<h1 id="quizName">My quiz name</h1>
+<div class="pagination">
+    <a class="active">Question number: </a>
+    <a href="#">&laquo;</a>
+    <a class="active" href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a><br><br><br>
+</div>
+    <div id="question">Question:
+        <input type="text" name="question" placeholder="Write question here" autofocus required title="Write here"></div>
+    <div id="answerA">A:
+        <input type="text" name="A" placeholder="Write A answer here" required title="Write here"></div>
+    <div id="answerB">B:
+        <input type="text" name="B" placeholder="Write B answer here" required title="Write here"></div>
+    <div id="answerC">C:
+        <input type="text" name="C" placeholder="Write C answer here" required title="Write here"></div>
+    <div id="answerD">D:
+        <input type="text" name="D" placeholder="Write D answer here" required title="Write here"></div>
+    <div id="correctAnswer">Correct answer:
+        <input type="text" name="correctAnswer" placeholder="Is A, B, C, or D a correct answer?" maxlength="1" required title="Write here"></div>
+    <div id="file">Add a file: <input type="file" id="myFile"></div>
+
+
+    <button type="button" class="cancelbtn" value="Cancel" title="Click to cancel">Cancel Creating Quiz</button>
+    <button type="submit" class="submitbtn" value="Next" title="Click to create next question">Next</button>
+    <button type="submit" class="savebtn" value="Save Quiz" title="Click to save quiz">Save Quiz</button>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+</body>
+</html>

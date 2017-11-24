@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question Creator</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/minBootstrap.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-toggle disabled" style="color: blue">Karol's Quiz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link disabled">Home Page<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Quiz List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Create Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Scoreboard</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right disabled">
+            <li class="nav-item">
+                <a class="nav-link glyphicon glyphicon-log-in disabled" data-toggle="modal" data-target="#modal">Login</a>
+            </li>
+            <li>
+                <a style="padding: 10px"></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" disabled>
+            <button class="btn btn-outline-success my-2 my-sm-0 disabled" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row" align="center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2 class="greeting" id="quizNameQuestionCreator">Showing quiz name</h2>
+        </div>
+    </div>
+
+    <div class="form-row align-items-center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form class="questions">
+                <div class="form-group" align="left">
+                    <label for="inputQuestionQuestionCreator">Question</label>
+                    <input type="text" class="form-control" id="inputQuestionQuestionCreator" aria-label="text" placeholder="Write question ">
+                    </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerAQuestionCreator">A</label>
+                    <input type="text" class="form-control" id="inputAnswerAQuestionCreator" aria-label="text" placeholder="Write A answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerBQuestionCreator">B</label>
+                    <input type="text" class="form-control" id="inputAnswerBQuestionCreator" aria-label="text" placeholder="Write B answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerCQuestionCreator">C</label>
+                    <input type="text" class="form-control" id="inputAnswerCQuestionCreator" aria-label="text" placeholder="Write C answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputAnswerDQuestionCreator">D</label>
+                    <input type="text" class="form-control" id="inputAnswerDQuestionCreator" aria-label="text" placeholder="Write D answer ">
+                </div>
+                <div class="form-group" align="left">
+                    <label for="inputCorrectAnswerQuestionCreator">Correct answer</label>
+                    <input type="text" class="form-control" id="inputCorrectAnswerQuestionCreator" aria-label="text"
+                           placeholder="Is A, B, C, or D a correct answer?">
+                </div>
+
+                <form>
+                    <div class="form-group" align="left">
+                        <label for="addedFileQuestionCreator">Add a file</label>
+                        <input type="file" class="form-control-file" id="addedFileQuestionCreator">
+                    </div>
+                </form>
+
+                <div class="btn-group btn-group-sm padbottom" role="group" aria-label="">
+                    <a class="btn btn-outline-secondary cancelbtn" title="Click to cancel">Cancel</a>
+                    <a onclick="window.history.back()" class="btn btn-outline-primary submitbtn" title="Click to create next question">
+                        Next Question</a>
+                    <a href="questionCreator.html" class="btn btn-outline-primary savebtn" role="button" title="Click to save quiz" id="saveQuiz">
+                        Save Quiz</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/quizCreator.js"></script>
+
+</body>
+</html>
